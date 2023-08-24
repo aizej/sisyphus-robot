@@ -14,6 +14,7 @@ In webots we need to create controller file that is used in the robot Normally t
 
 Then I used stable baselines 3 gym and created a custom environment:
 1) initialization:
+
 ![init_function_world_part](https://github.com/aizej/sisyphus-robot/assets/61479273/c9f23292-2eb6-448e-ac71-f46141767040)
 
 
