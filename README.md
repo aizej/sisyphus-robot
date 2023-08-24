@@ -60,6 +60,20 @@ Here the last row is the awnser for the least positive or negative angle to the 
 
 ![angle_calculation_graph](https://github.com/aizej/sisyphus-robot/assets/61479273/7af3c3b2-18fe-42bf-a84c-b74ab8022244)
 
+Then we pass the current steps information to observation and stack it so we can pass it to the network:
+
+![observation](https://github.com/aizej/sisyphus-robot/assets/61479273/76c308e4-05fd-4a91-9eee-8fef1dcb40fb)
+
+Then it's important to choose a good reward function. So I chose something simple:
+The reward will be how high the ball currently is.
+
+![reward](https://github.com/aizej/sisyphus-robot/assets/61479273/4fa5962b-0bf1-40fd-b7c6-f9220dc99879)
+
+
+
+
+
+
 
 
 
