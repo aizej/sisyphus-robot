@@ -34,7 +34,7 @@ The action space is in this situation array of 10 split into two.
 One array for the right side and one for the left side.
 I didn't implement action space for every wheel because I didn't see any benefits in it.
 Then this smaller array is put into a function that normalizes it to {-1,1}
-and inputed as speed to our motors.
+and input as speed to our motors.
 
 
 
