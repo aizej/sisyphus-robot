@@ -4,6 +4,8 @@ A simulated robot in WEBOTS learns how to push a ball up the hill using PPO
 Recently I had an idea to make Ai recreate the recent Sisyphus meme so I searched for a robotic simulation program that could run on my PC (not isac-sim) and I found WEBOTS.
 It's free and it has built-in robot and environment building options. Plus it also has good integration with python.
 
+![world_sreanshot](https://github.com/aizej/sisyphus-robot/assets/61479273/5afdc343-01af-429f-a3c0-1eeea04d99d2)
+
 the result:
 https://github.com/aizej/sisyphus-robot/assets/61479273/beb0de8b-8c38-4fa4-8d05-defa096d9a97
 
