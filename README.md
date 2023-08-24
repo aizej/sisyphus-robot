@@ -18,7 +18,15 @@ Then I used stable baselines 3 gym and created a custom environment:
 
 ![init_function_world_part](https://github.com/aizej/sisyphus-robot/assets/61479273/c9f23292-2eb6-448e-ac71-f46141767040)
 
-  After that we will setup our networks observation space and action space:
-
+  After that, we will set up our network's observation space, action space,steps per round, and stacked frames.
+  We usually should stack frames with increased time between them but because One frame already has 17 variables after some testing, we decided that the last 3 frames should be enough.
+  
 ![init_function_network_part](https://github.com/aizej/sisyphus-robot/assets/61479273/51eeddd8-dd9e-42df-b77a-5d89506607b7)
+
+
+2) Step function:
+   This function takes in the actions of our neural network, sends them to our robot, and does one frame of physical simulation.
+
+![step_1_how_we_drive](https://github.com/aizej/sisyphus-robot/assets/61479273/6eec7a6a-cb8d-48ff-8865-e53c40c5e328)
+
 
