@@ -11,7 +11,6 @@ https://github.com/aizej/sisyphus-robot/assets/61479273/beb0de8b-8c38-4fa4-8d05-
 
 
 
-
 In webots we need to create controller file that is used in the robot Normally this file can not interact with the world only through sensors and the robot but for this simulation, I used the supervisor controller. That allowed me to get any information and interact with the objects in the scene.
 
 Then I used stable baselines 3 gym and created a custom environment:
