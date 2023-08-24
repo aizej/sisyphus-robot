@@ -30,4 +30,12 @@ Then I used stable baselines 3 gym and created a custom environment:
 
 ![step_1_how_we_drive](https://github.com/aizej/sisyphus-robot/assets/61479273/6eec7a6a-cb8d-48ff-8865-e53c40c5e328)
 
-The action space is in this situation array of 10
+The action space is in this situation array of 10 split into two.
+One array for the right side and one for the left side.
+I didn't implement action space for every wheel because I didn't see any benefits in it.
+Then this smaller array is put into a function that normalizes it to {-1,1}
+and inputed as speed to our motors.
+
+
+
+
