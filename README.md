@@ -14,7 +14,11 @@ In webots we need to create controller file that is used in the robot Normally t
 
 Then I used stable baselines 3 gym and created a custom environment:
 1) initialization:
+  Here we set up some variables as the max speed of our wheels and get all the objects to interact with
 
 ![init_function_world_part](https://github.com/aizej/sisyphus-robot/assets/61479273/c9f23292-2eb6-448e-ac71-f46141767040)
 
+  After that we will setup our networks observation space and action space:
+
+![init_function_network_part](https://github.com/aizej/sisyphus-robot/assets/61479273/51eeddd8-dd9e-42df-b77a-5d89506607b7)
 
