@@ -40,11 +40,11 @@ Then I used stable baselines 3 gym and created a custom environment:
   This function normalizes an array of any size to  {-1,1} action space:
 
 
-
+![drive_exuation](https://github.com/aizej/sisyphus-robot/assets/61479273/2ddae8c0-157e-4b6d-86d2-366e50fd451b)
 ![drive_functio![drive_function_exuation](https://github.com/aizej/sisyphus-robot/assets/61479273/c108b8b6-1542-4e0e-b78f-76382ac193d9)
-n_graph](https://github.com/aizej/sisyphus-robot/assets/61479273/3e33d654-a78b-4414-8e58-39aff85d38fe)
 
-And here is the implementation of that:
+
+  And here is the implementation of that:
 
 ![wheel_speed_function](https://github.com/aizej/sisyphus-robot/assets/61479273/9b16fd02-8ac2-4bf3-a9d4-095c6fe57209)
 
