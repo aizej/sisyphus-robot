@@ -41,16 +41,24 @@ Then I used stable baselines 3 gym and created a custom environment:
 
 
 ![drive_exuation](https://github.com/aizej/sisyphus-robot/assets/61479273/2ddae8c0-157e-4b6d-86d2-366e50fd451b)
-![drive_functio![drive_function_exuation](https://github.com/aizej/sisyphus-robot/assets/61479273/c108b8b6-1542-4e0e-b78f-76382ac193d9)
+![drive_function_graph](https://github.com/aizej/sisyphus-robot/assets/61479273/323cb82a-e95b-4c04-b9d2-ddac8041fa14)
 
 
   And here is the implementation of that:
+  (I only switched the power to 8/5 instead of 9/5)
 
 ![wheel_speed_function](https://github.com/aizej/sisyphus-robot/assets/61479273/9b16fd02-8ac2-4bf3-a9d4-095c6fe57209)
 
+ Now we need to get all the positions and the angles of the robot and the boulder:
+
+ ![angle_calculation_implementaion](https://github.com/aizej/sisyphus-robot/assets/61479273/2c11ce1e-73d1-43de-a4e2-9710938a9675)
 
 
+To get the rotation I thought I could get the rotation right from webots and just subtract it from the direction from the robot to the boulder.
+but the one that I could access from webots was not usable so I decided to calculate it from the robot's speed using the dot product and z product.
+Here the last row is the awnser for the least positive or negative angle to the right direction (to the boulder)
 
+![angle_calculation_graph](https://github.com/aizej/sisyphus-robot/assets/61479273/7af3c3b2-18fe-42bf-a84c-b74ab8022244)
 
 
 
