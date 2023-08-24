@@ -7,6 +7,7 @@ Recently I had an idea to make Ai recreate the recent Sisyphus meme so I searche
 It's free and it has built-in robot and environment building options. Plus it also has good integration with python.
 
 the result:
+video:
 https://github.com/aizej/sisyphus-robot/assets/61479273/beb0de8b-8c38-4fa4-8d05-defa096d9a97
 
 
@@ -69,8 +70,27 @@ The reward will be how high the ball currently is.
 
 ![reward](https://github.com/aizej/sisyphus-robot/assets/61479273/4fa5962b-0bf1-40fd-b7c6-f9220dc99879)
 
+And set done to true if we complete the last step of the episode:
+
+![done_function](https://github.com/aizej/sisyphus-robot/assets/61479273/5ff8316e-14b8-4fde-ad6e-f96e5e6955eb)
+
+3) The reset function:
+
+We set the robot back to its starting position the ball to its starting position and reset the step counter.
+
+![reset_function](https://github.com/aizej/sisyphus-robot/assets/61479273/413801e9-1c2f-48ed-99e4-36aa21937312)
+
+After all that we create a logger and start learning with PPO!
+
+Reward:
+
+![reward_screanshot](https://github.com/aizej/sisyphus-robot/assets/61479273/443485fd-cae6-4989-b310-42ee9b2f457b)
 
 
+video:
+https://github.com/aizej/sisyphus-robot/assets/61479273/51f89076-8945-44d4-a4f2-4477627e9179
+
+   
 
 
 
