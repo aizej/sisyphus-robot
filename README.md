@@ -29,4 +29,4 @@ Then I used stable baselines 3 gym and created a custom environment:
 
 ![step_1_how_we_drive](https://github.com/aizej/sisyphus-robot/assets/61479273/6eec7a6a-cb8d-48ff-8865-e53c40c5e328)
 
-
+The action space is in this situation array of 10
