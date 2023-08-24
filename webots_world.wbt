@@ -1,0 +1,187 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.07065812637426405 -0.11708598112877973 0.9906050182592401 4.676536243238989
+  position 0.5585391594206515 2.9283977627815116 0.5657339149291214
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  translation 1 0 0
+  rotation 1 0 0 1.5707996938995747
+  children [
+    DEF tvar_rampa Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../../../Desktop/webots/plocha_simple.obj"
+        ]
+      }
+    }
+  ]
+  boundingObject USE tvar_rampa
+}
+DEF zebrak Robot {
+  translation 0 0 0.05
+  rotation 0.707107781185531 0.70710578118615 -3.390508950807168e-09 3.14159
+  children [
+    DEF kolo_R2 HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor -0.16 -0.07 0
+      }
+      device [
+        DEF motor_R_B RotationalMotor {
+          name "motor_R_B"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15999999999999723 -0.07000000000000056 -1.432148150267076e-16
+        rotation -1.80560301131431e-15 1 -1.4130806175503299e-15 1.5707999999999769
+        children [
+          DEF tvar_kolo_R_B Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.05
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE tvar_kolo_R_B
+        physics Physics {
+        }
+      }
+    }
+    DEF kolo_R1 HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor -0.16 0.07 0
+      }
+      device [
+        DEF motor_R_A RotationalMotor {
+          name "motor_R_A"
+        }
+      ]
+      endPoint Solid {
+        translation -0.16 0.07 0
+        rotation 6.280359261430609e-16 1 6.280359261430609e-16 1.5707996938995323
+        children [
+          DEF tvar_kolo_R1 Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.05
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE tvar_kolo_R1
+        physics Physics {
+        }
+      }
+    }
+    DEF kolo_L2 HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.16 -0.07 0
+      }
+      device [
+        DEF motor_L_B RotationalMotor {
+          name "motor_L_B"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16 -0.07 0
+        rotation 1.745652351980273e-09 -1 -1.7456592014970926e-09 1.570799693899531
+        children [
+          DEF tvar_kolo Shape {
+            appearance DEF arva_kolo PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.05
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE tvar_kolo
+        physics Physics {
+        }
+      }
+    }
+    DEF body_robot Pose {
+      children [
+        DEF tvar_robot Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.7 1
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.3 0.24 0.05
+          }
+        }
+      ]
+    }
+    DEF kolo1 HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.16 0.07 0
+      }
+      device [
+        DEF motor_L_A RotationalMotor {
+          name "motor_L_A"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16 0.07 0
+        rotation -4.162265708088158e-10 -1 4.162290829525204e-10 1.5707996938995146
+        children [
+          DEF tvar_kolo Shape {
+            appearance USE arva_kolo
+            geometry Cylinder {
+              height 0.01
+              radius 0.05
+            }
+          }
+        ]
+        boundingObject USE tvar_kolo
+        physics DEF physics_kolo Physics {
+        }
+      }
+    }
+  ]
+  boundingObject USE tvar_robot
+  physics Physics {
+  }
+  controller "zebrak_controler"
+  supervisor TRUE
+}
+DEF baller Solid {
+  translation 0.6 0 0.1
+  children [
+    DEF tvar_koule Shape {
+      appearance PBRAppearance {
+      }
+      geometry Sphere {
+        radius 0.1
+        subdivision 3
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE tvar_koule
+  physics Physics {
+    density -1
+    mass 0.001
+  }
+}
